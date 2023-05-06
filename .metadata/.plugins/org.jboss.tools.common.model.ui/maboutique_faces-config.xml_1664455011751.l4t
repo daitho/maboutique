@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Layout resource="/maboutique/src/main/webapp/WEB-INF/faces-config.xml">
+ <TreeFormPage>
+  <Memento type="FacesConfig22">
+   <Memento collapsed="false" type="Factories"/>
+   <Memento collapsed="false" type="Lifecycle"/>
+   <Memento collapsed="false" type="Advanced"/>
+  </Memento>
+  <Memento type="JSFNavigationCase22">
+   <Memento collapsed="false" type="Navigation Case"/>
+   <Memento collapsed="false" type="Advanced"/>
+  </Memento>
+  <Memento type="JSFNavigationRule22">
+   <Memento collapsed="false" type="Navigation Rule"/>
+   <Memento collapsed="false" type="Navigation Cases"/>
+   <Memento collapsed="false" type="Advanced"/>
+  </Memento>
+  <Memento type="JSFApplication22">
+   <Memento collapsed="false" type="Application"/>
+   <Memento collapsed="false" type="EL Resolvers"/>
+   <Memento collapsed="false" type="Property Resolvers"/>
+   <Memento collapsed="false" type="Variable Resolvers"/>
+   <Memento collapsed="false" type="Message Bundles"/>
+   <Memento collapsed="false" type="Resource Bundles"/>
+   <Memento collapsed="false" type="Locale Config"/>
+   <Memento collapsed="false" type="Default Validators"/>
+   <Memento collapsed="false" type="Extensions"/>
+   <Memento collapsed="false" type="Advanced"/>
+  </Memento>
+  <Memento type="">
+   <Memento type="Properties Editor"/>
+  </Memento>
+ </TreeFormPage>
+</Layout>

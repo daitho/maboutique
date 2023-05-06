@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="javax.inject.Named"/>
+    <fullyQualifiedTypeName name="javax.faces.bean.SessionScoped"/>
+    <fullyQualifiedTypeName name="javax.enterprise.context.SessionScoped"/>
+    <fullyQualifiedTypeName name="maboutique.data.Utilisateur"/>
+    <fullyQualifiedTypeName name="java.io.Serializable"/>
+    <fullyQualifiedTypeName name="javax.faces.context.FacesContext"/>
+    <fullyQualifiedTypeName name="javax.faces.application.FacesMessage"/>
+    <fullyQualifiedTypeName name="maboutique.dao.file.DaoUtilisateur"/>
+    <fullyQualifiedTypeName name="javax.inject.Inject"/>
+    <fullyQualifiedTypeName name="maboutique.model.ModelConnexion"/>
+    <fullyQualifiedTypeName name="maboutique.util.UtilJsf"/>
+    <fullyQualifiedTypeName name="javax.validation.constraints.NotBlank"/>
+    <fullyQualifiedTypeName name="javax.validation.constraints.Size"/>
+    <fullyQualifiedTypeName name="javax.validation.constraints.Email"/>
+    <fullyQualifiedTypeName name="maboutique.data.Categorie"/>
+    <fullyQualifiedTypeName name="maboutique.dao.jpa.DaoCategorie"/>
+    <fullyQualifiedTypeName name="javax.validation.constraints.Min"/>
+    <fullyQualifiedTypeName name="javax.validation.constraints.DecimalMin"/>
+    <fullyQualifiedTypeName name="javax.validation.constraints.Pattern"/>
+    <fullyQualifiedTypeName name="maboutique.data.Produit"/>
+    <fullyQualifiedTypeName name="maboutique.dao.jpa.DaoProduit"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+</qualifiedTypeNameHistroy>

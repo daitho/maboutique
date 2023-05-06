@@ -1,0 +1,74 @@
+package maboutique.data;
+
+import java.io.Serializable;
+
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Utilisateur implements Serializable {
+	/**
+	 * s
+	 */
+	private static final long serialVersionUID = 1L;
+	@Id
+	private Integer id;
+	@NotBlank( message="Le nom doit être renseigné")
+	@Size(max=50, message="Valeur trop longue pour le nom : 50 car. maxi" )
+	private String nom;
+	
+	@NotBlank( message="Le prénom doit Ãªtre renseigné")
+	@Size(max=50, message="Valeur trop longue pour le nom : 50 car. maxi" )
+	private String prenom;
+	
+	@NotBlank( message="L'adresse email doit Ãªtre renseignée")
+	@Email( message="L'adresse e mail n'est pas valide.")
+	private String email ;
+	
+	@NotBlank( message="Le mot de passe doit Ãªtre renseigné")
+	@Size(min=5, message="Le mot d passe doit avoir au moins 5 caractÃ¨res")
+	@Size(max=50, message="Le mot d passe doit avoir au plus 50")
+	private String motDePasse;
+	private boolean admin ;
+	public boolean isAdmin() {
+		return admin;
+	}
+	public void setAdmin(boolean admin) {
+		this.admin = admin;
+	}
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public String getNom() {
+		return nom;
+	}
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+	public String getPrenom() {
+		return prenom;
+	}
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getPassword() {
+		return motdepasse;
+	}
+	public void setPassword(String motdepasse) {
+		this.motdepasse  = motdepasse;
+	}
+
+	
+}

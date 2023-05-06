@@ -1,0 +1,76 @@
+package maboutique.model;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.annotation.ManagedBean;
+import javax.enterprise.context.SessionScoped;
+import javax.inject.Inject;
+import javax.inject.Named;
+
+import maboutique.dao.jpa.DaoProduit;
+import maboutique.data.Produit;
+import maboutique.model.ModelCatalogue.ProduitAChoisir;
+
+
+@Named
+@SessionScoped
+@SuppressWarnings("serial")
+@ManagedBean(value = "session")
+public class ModelPanier implements Serializable{
+	
+private List<Produit> panier = new ArrayList<>();
+	
+	@Inject
+	private ModelCatalogue modelCatalogue;
+	
+	@Inject
+	private DaoProduit daoProduit;
+
+	private List<ProduitAChoisir> panierAvecQuantite = new ArrayList<>();
+	
+	public List<Produit> getPanier() {
+		return panier;
+	}
+	
+	public List<ProduitAChoisir> getPanierAvecQuantite() {
+		return panierAvecQuantite;
+	}
+	
+	
+
+	public static class PanierAvecQuantité {
+		
+		// Champs
+		private Produit	produit;
+		private int	quantité;
+			
+		// Constructeur
+		public PanierAvecQuantité(Produit produit, int quantité) {
+			this.produit = produit;
+			this.quantité = quantité;
+		}
+
+		public Produit getProduit() {
+			return produit;
+		}
+
+		public void setProduit(Produit produit) {
+			this.produit = produit;
+		}
+
+		public int getQuantité() {
+			return quantité;
+		}
+
+		public void setQuantité(int quantité) {
+			this.quantité = quantité;
+		}
+			
+		// Getters & Setters
+		
+	}
+	
+
+}

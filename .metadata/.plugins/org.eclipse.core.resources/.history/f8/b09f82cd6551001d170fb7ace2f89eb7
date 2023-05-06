@@ -1,0 +1,81 @@
+package maboutique.model;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.faces.view.ViewScoped;
+import javax.inject.Inject;
+import javax.inject.Named;
+
+import maboutique.dao.jpa.DaoProduit;
+import maboutique.data.Produit;
+
+@Named
+@ViewScoped
+@SuppressWarnings("serial")
+public class ModelCatalogue implements Serializable {
+
+	// Champs
+	private List<ProduitAChoisir> liste;
+
+	@Inject
+	private ModelConnexion modelConnexion;
+
+	@Inject
+	private DaoProduit daoProduit;
+	
+	@Inject
+	private ModelPanier modelPanier;
+
+
+
+	@SuppressWarnings("unlikely-arg-type")
+	public List<ProduitAChoisir> getListe() {
+		liste = new ArrayList<ProduitAChoisir>();
+		for (Produit produit : daoProduit.listerCatalogue(modelConnexion.getUtilisateurActif())) {
+			ProduitAChoisir produitAChoisir = new ProduitAChoisir(produit,false);
+	         
+			for (ProduitAChoisir panier : modelPanier.getPanier()) {
+				if (produit.equals(panier)) {
+					produitAChoisir.setChoisi(true);
+				}
+				
+			}
+			liste.add(produitAChoisir);
+			
+		}
+		System.out.println(liste.size());
+		return liste;
+	}
+
+	// Classe auxiliaire
+	public static class ProduitAChoisir {
+		// Champs
+		private Produit produit;
+		private boolean choisi;
+
+		// Constructeur
+		public ProduitAChoisir(Produit produit, boolean choisi) {
+			this.produit = produit;
+			this.choisi = choisi;
+		}
+
+		// Getters & Setters
+		public Produit getProduit() {
+			return produit;
+		}
+
+		public void setProduit(Produit produit) {
+			this.produit = produit;
+		}
+
+		public boolean isChoisi() {
+			return choisi;
+		}
+
+		public void setChoisi(boolean choisi) {
+			this.choisi = choisi;
+		}
+	}
+}
